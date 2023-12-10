@@ -1,25 +1,12 @@
 import { useState } from "react";
 import Planet from "./Planet";
-import planets from "../data.json";
-import { Link, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <>
-      <header>
-        <nav>
-          <ul>
-            {planets.map((planet, index) => {
-              return (
-                <Link key={index} to={`/${planet.name}`}>
-                  <li>{planet.name}</li>
-                </Link>
-              );
-            })}
-          </ul>
-        </nav>
-      </header>
-
+      <Header />
       <Routes>
         <Route path="/:planet" element={<Planet />}></Route>
       </Routes>

@@ -10,5 +10,11 @@
   box-sizing: border-box;
   font-family: "Antonio", sans-serif;
   font-family: "League Spartan", sans-serif;
-  /* background: #070724; */
+  background: #070724;
+  background-image: url(.././public/assets/background-stars.svg);
+  background-repeat: no-repeat;
+}
+
+.font-antonio {
+  font-family: "Antonio", sans-serif;
 }
