@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import hamburger from "../../public/assets/icon-hamburger.svg";
-import { Link } from "react-router-dom";
 import planets from "../../data.json";
 import arrowImg from "../../public/assets/icon-chevron.svg";
+import { useNavigate } from "react-router-dom";
 
-export default function Header() {
-  const [hidden, SetHidden] = useState(false);
+export default function Header({ setHidden, hidden }) {
+  const navigate = useNavigate();
+
   return (
     <header>
       <div className="flex justify-between items-center px-[24px] pt-[16px]">
@@ -16,7 +17,7 @@ export default function Header() {
           src={hamburger}
           alt="hamburger image"
           onClick={() => {
-            SetHidden(!hidden);
+            setHidden(!hidden);
           }}
         />
       </div>
@@ -27,11 +28,14 @@ export default function Header() {
           <ul className="text-[#FFF] text-[15px] font-bold">
             {planets.map((planet, index) => {
               return (
-                <div>
-                  <Link
+                <div key={index}>
+                  <div
                     key={index}
-                    to={`/${planet.name}`}
                     className="flex justify-center items-center mt-[20px]"
+                    onClick={() => {
+                      setHidden(!hidden);
+                      navigate(`/${planet.name}`);
+                    }}
                   >
                     {/* get planets color from data json */}
                     <div
@@ -44,7 +48,7 @@ export default function Header() {
                       alt="arrow image"
                       className="w-[4px] h-[8px] ml-auto mr-[8px]"
                     />
-                  </Link>
+                  </div>
                   <hr className="text-[white] h-[1px] opacity-[0.2] px-[24px] mt-[20px]" />
                 </div>
               );
