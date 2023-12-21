@@ -1,3 +1,4 @@
+import { useState } from "react";
 import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
@@ -15,20 +16,49 @@ export default function Planet({ hidden }) {
       {!hidden && (
         <div>
           {/* here i write a overviev, structure and surface */}
-          <div className="flex items-center justify-center gap-[68px] mt-[20px] px-[24px]">
+          <div className="flex items-center justify-center gap-[57px] mt-[20px] px-[24px]">
             <div>
-              <p className="text-[#FFFFFF] opacity-[0.5] text-[11px] font-bold tracking-widest">
+              <p
+                onClick={() => setChange("overview")}
+                className={`text-white text-[11px] font-bold tracking-widest ${
+                  change === "overview" ? "opacity-100" : "opacity-50"
+                }`}
+                style={
+                  change === "overview"
+                    ? { borderBottom: `4px solid ${currentPlanet.color}` }
+                    : {}
+                }
+              >
                 OVERVIEW
               </p>
-              <div className="w-[80px] h-[4px] bg-[white]"></div>
             </div>
             <div>
-              <p className="text-[#FFFFFF] opacity-[0.5] text-[11px] font-bold tracking-widest">
+              <p
+                onClick={() => setChange("structure")}
+                className={`text-white text-[11px] font-bold tracking-widest ${
+                  change === "structure" ? "opacity-100" : "opacity-50"
+                }`}
+                style={
+                  change === "structure"
+                    ? { borderBottom: `4px solid ${currentPlanet.color}` }
+                    : {}
+                }
+              >
                 STRUCTURE
               </p>
             </div>
             <div>
-              <p className="text-[#FFFFFF] opacity-[0.5] text-[11px] font-bold tracking-widest">
+              <p
+                onClick={() => setChange("geology")}
+                className={`text-white text-[11px] font-bold tracking-widest ${
+                  change === "geology" ? "opacity-100" : "opacity-50"
+                }`}
+                style={
+                  change === "geology"
+                    ? { borderBottom: `4px solid ${currentPlanet.color}` }
+                    : {}
+                }
+              >
                 SURFACE
               </p>
             </div>
@@ -50,6 +80,7 @@ export default function Planet({ hidden }) {
             </h1>
             <p className="text-[#FFFFFF] text-[11px] font-normal font-sparten mt-[16px] leading-5">
               {currentPlanet[change]?.content}
+              console.log({currentPlanet[change]?.content})
             </p>
             <div className="flex items-center justify-center mt-[32px]">
               <p className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-bold">

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Planet from "./Planet";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
-// import Home from "./Components/Home";
+import Home from "./Components/Home";
 
 function App() {
   const [hidden, setHidden] = useState(false);
@@ -11,7 +11,7 @@ function App() {
     <>
       <Header hidden={hidden} setHidden={setHidden} />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/:planet" element={<Planet hidden={hidden} />}></Route>
       </Routes>
     </>
