@@ -98,40 +98,40 @@ export default function Planet({ hidden }) {
             {/* This component will be positioned on the right side */}
           </div>
 
-          <div className="px-[24px] mt-[28px] grid justify-center items-center">
+          <div className="px-[24px] mt-[28px] grid justify-center items-center pb-[36px] md:flex md:flex-row md:gap-[11px]">
             {/* first div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px]">
-              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto]">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
+              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto] ">
                 ROTATION TIME
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
                 {currentPlanet.rotation}
               </h4>
             </div>
             {/* second div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px]">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
               <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto]">
                 REVOLUTION TIME
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
                 {currentPlanet.revolution}
               </h4>
             </div>
             {/* third div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px]">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
               <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto]">
                 RADIUS
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
                 {currentPlanet.radius}
               </h4>
             </div>
             {/* fourth div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px]">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
               <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto]">
                 AVERAGE TEMP.
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
                 {currentPlanet.temperature}
               </h4>
             </div>
