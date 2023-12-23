@@ -16,7 +16,7 @@ export default function Planet({ hidden }) {
       {!hidden && (
         <div>
           {/* here i write a overviev, structure and surface */}
-          <div className="flex items-center justify-center gap-[57px] mt-[20px] px-[24px]">
+          <div className="flex items-center justify-center gap-[57px] mt-[20px] px-[24px] md:hidden">
             <div>
               <p
                 onClick={() => setChange("overview")}
@@ -35,7 +35,7 @@ export default function Planet({ hidden }) {
             <div>
               <p
                 onClick={() => setChange("structure")}
-                className={`text-white text-[11px] font-bold tracking-widest ${
+                className={`text-white text-[11px] font-bold tracking-widest  ${
                   change === "structure" ? "opacity-100" : "opacity-50"
                 }`}
                 style={
@@ -63,6 +63,7 @@ export default function Planet({ hidden }) {
               </p>
             </div>
           </div>
+
           {/* hr line */}
           <hr className="px-[0] h-[1px] bg-[#FFF] opacity-[0.2] mt-[20px]" />
           <div className=" flex justify-center items-center">
@@ -74,15 +75,14 @@ export default function Planet({ hidden }) {
           </div>
 
           {/* text sectiction */}
-          <div className="px-[24px] text-center">
+          <div className="px-[24px] text-center flex items-center flex-col md:text-left md:items-start">
             <h1 className="text-[#FFFFFF] text-[40px] font-normal font-antonio mt-[98px]">
               {currentPlanet.name.toLocaleUpperCase()}
             </h1>
-            <p className="text-[#FFFFFF] text-[11px] font-normal font-sparten mt-[16px] leading-5">
+            <p className="text-[#FFFFFF] text-[11px] font-normal w-[39ch] font-sparten mt-[16px] leading-5 opacity-70 md:text-[15px] ">
               {currentPlanet[change]?.content}
-              console.log({currentPlanet[change]?.content})
             </p>
-            <div className="flex items-center justify-center mt-[32px]">
+            <div className="flex items-center justify-center mt-[32px] md:justify-start">
               <p className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-bold">
                 <span className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-normal">
                   Source :

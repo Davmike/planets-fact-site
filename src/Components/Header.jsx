@@ -8,7 +8,7 @@ export default function Header({ setHidden, hidden }) {
   const navigate = useNavigate();
 
   return (
-    <header>
+    <header className="md:hidden ">
       <div className="flex justify-between items-center px-[24px] pt-[16px]">
         <h3 className="text-[#FFFFFF] text-[28px] font-[normal] font-antonio">
           THE PLANETS
