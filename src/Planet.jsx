@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
 import linkImg from "../public/assets/icon-source.svg";
+import Overview from "./Components/Overview";
 
 export default function Planet({ hidden }) {
   const { planet } = useParams();
@@ -63,7 +64,6 @@ export default function Planet({ hidden }) {
               </p>
             </div>
           </div>
-
           {/* hr line */}
           <hr className="px-[0] h-[1px] bg-[#FFF] opacity-[0.2] mt-[20px]" />
           <div className=" flex justify-center items-center">
@@ -75,22 +75,27 @@ export default function Planet({ hidden }) {
           </div>
 
           {/* text sectiction */}
-          <div className="px-[24px] text-center flex items-center flex-col md:text-left md:items-start">
-            <h1 className="text-[#FFFFFF] text-[40px] font-normal font-antonio mt-[98px]">
-              {currentPlanet.name.toLocaleUpperCase()}
-            </h1>
-            <p className="text-[#FFFFFF] text-[11px] font-normal w-[39ch] font-sparten mt-[16px] leading-5 opacity-70 md:text-[15px] ">
-              {currentPlanet[change]?.content}
-            </p>
-            <div className="flex items-center justify-center mt-[32px] md:justify-start">
-              <p className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-bold">
-                <span className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-normal">
-                  Source :
-                </span>
-                Wikipedia
+          <div className="px-[24px] text-center flex flex-col md:flex-row items-center md:text-left md:items-start md:px-[40px]">
+            <div className="flex-grow">
+              {/* Add this div to let the Overview component push to the right */}
+              <h1 className="text-[#FFFFFF] text-[40px] font-normal font-antonio mt-[98px]">
+                {currentPlanet.name.toLocaleUpperCase()}
+              </h1>
+              <p className="text-[#FFFFFF] text-[11px] font-normal w-[39ch] font-sparten mt-[16px] leading-5 opacity-70 md:text-[15px]">
+                {currentPlanet[change]?.content}
               </p>
-              <img className="ml-[4px]" src={linkImg} alt="link open image" />
+              <div className="flex items-center justify-center mt-[32px] md:justify-start">
+                <p className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-bold">
+                  <span className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-normal">
+                    Source :
+                  </span>
+                  Wikipedia
+                </p>
+                <img className="ml-[4px]" src={linkImg} alt="link open image" />
+              </div>
             </div>
+            <Overview />
+            {/* This component will be positioned on the right side */}
           </div>
 
           <div className="px-[24px] mt-[28px] grid justify-center items-center">
