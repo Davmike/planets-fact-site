@@ -1,7 +1,10 @@
 import React from "react";
 import planets from "../../data.json";
+import { useNavigate } from "react-router-dom";
 
 export default function TabletHeader() {
+  const navigate = useNavigate();
+
   return (
     <header className="hidden md:flex justify-center">
       <div className="flex px-[24px] pt-[16px] md:flex flex-col items-center justify-center">
@@ -20,7 +23,6 @@ export default function TabletHeader() {
                     key={index}
                     className="flex justify-center items-center mt-[20px]"
                     onClick={() => {
-                      setHidden(!hidden);
                       navigate(`/${planet.name}`);
                     }}
                   >

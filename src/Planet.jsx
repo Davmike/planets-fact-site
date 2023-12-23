@@ -18,6 +18,7 @@ export default function Planet({ hidden }) {
         <div>
           {/* here i write a overviev, structure and surface */}
           <div className="flex items-center justify-center gap-[57px] mt-[20px] px-[24px] md:hidden">
+            {/* overview */}
             <div>
               <p
                 onClick={() => setChange("overview")}
@@ -33,6 +34,7 @@ export default function Planet({ hidden }) {
                 OVERVIEW
               </p>
             </div>
+            {/* strucutre */}
             <div>
               <p
                 onClick={() => setChange("structure")}
@@ -48,6 +50,7 @@ export default function Planet({ hidden }) {
                 STRUCTURE
               </p>
             </div>
+            {/* surface */}
             <div>
               <p
                 onClick={() => setChange("geology")}
@@ -94,7 +97,7 @@ export default function Planet({ hidden }) {
                 <img className="ml-[4px]" src={linkImg} alt="link open image" />
               </div>
             </div>
-            <Overview />
+            <Overview change={change} setChange={setChange} />
             {/* This component will be positioned on the right side */}
           </div>
 
