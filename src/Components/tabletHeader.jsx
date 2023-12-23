@@ -7,7 +7,7 @@ export default function TabletHeader() {
 
   return (
     <header className="hidden md:flex justify-center">
-      <div className="flex px-[24px] pt-[16px] md:flex flex-col items-center justify-center">
+      <div className="flex px-[24px] pt-[16px] md:flex flex-col items-center justify-center xl:flex-row xl:gap-[534px]">
         <div>
           <h3 className="text-[#FFFFFF] text-[28px] font-[normal] font-antonio md:pt-[16px]">
             THE PLANETS

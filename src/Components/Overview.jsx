@@ -7,7 +7,7 @@ export default function Overview({ change, setChange }) {
   const currentPlanet = data.find((item) => item.name === planet);
 
   return (
-    <div className="hidden md:flex flex-col gap-[16px] mt-[140px]">
+    <div className="hidden md:flex flex-col gap-[16px] mt-[140px] xl:mt-[40px]">
       {/* Overview section*/}
       <div
         onClick={() => setChange("overview")}

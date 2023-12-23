@@ -69,72 +69,77 @@ export default function Planet({ hidden }) {
           </div>
           {/* hr line */}
           <hr className="px-[0] h-[1px] bg-[#FFF] opacity-[0.2] mt-[20px]" />
-          <div className=" flex justify-center items-center">
-            <img
-              className="px-[24px] w-[220px] mt-[75px] "
-              src={currentPlanet.images.planet}
-              alt="all planet image"
-            />
-          </div>
-
-          {/* text sectiction */}
-          <div className="px-[24px] text-center flex flex-col md:flex-row items-center md:text-left md:items-start md:px-[40px]">
-            <div className="flex-grow">
-              {/* Add this div to let the Overview component push to the right */}
-              <h1 className="text-[#FFFFFF] text-[40px] font-normal font-antonio mt-[98px]">
-                {currentPlanet.name.toLocaleUpperCase()}
-              </h1>
-              <p className="text-[#FFFFFF] text-[11px] font-normal w-[39ch] font-sparten mt-[16px] leading-5 opacity-70 md:text-[15px]">
-                {currentPlanet[change]?.content}
-              </p>
-              <div className="flex items-center justify-center mt-[32px] md:justify-start">
-                <p className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-bold">
-                  <span className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-normal">
-                    Source :
-                  </span>
-                  Wikipedia
-                </p>
-                <img className="ml-[4px]" src={linkImg} alt="link open image" />
-              </div>
+          <div className="xl:flex xl:gap-[193px] xl:justify-center">
+            <div className=" flex justify-center items-center xl:justify-start">
+              <img
+                className="px-[24px] w-[220px] mt-[75px] md:w-[285px] xl:w-[450px]"
+                src={currentPlanet.images.planet}
+                alt="all planet image"
+              />
             </div>
-            <Overview change={change} setChange={setChange} />
-            {/* This component will be positioned on the right side */}
-          </div>
 
-          <div className="px-[24px] mt-[28px] grid justify-center items-center pb-[36px] md:flex md:flex-row md:gap-[11px]">
+            {/* text sectiction */}
+            <div className="px-[24px] text-center flex flex-col md:flex-row items-center md:text-left md:items-start md:px-[40px] xl:flex-col">
+              <div className="flex-grow">
+                {/* Add this div to let the Overview component push to the right */}
+                <h1 className="text-[#FFFFFF] text-[40px] font-normal font-antonio mt-[98px] xl:text-[80px]">
+                  {currentPlanet.name.toLocaleUpperCase()}
+                </h1>
+                <p className="text-[#FFFFFF] text-[11px] font-normal w-[39ch] font-sparten mt-[16px] leading-5 opacity-70 md:text-[15px]">
+                  {currentPlanet[change]?.content}
+                </p>
+                <div className="flex items-center justify-center mt-[32px] md:justify-start">
+                  <p className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-bold">
+                    <span className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-normal">
+                      Source :
+                    </span>
+                    Wikipedia
+                  </p>
+                  <img
+                    className="ml-[4px]"
+                    src={linkImg}
+                    alt="link open image"
+                  />
+                </div>
+              </div>
+              <Overview change={change} setChange={setChange} />
+              {/* This component will be positioned on the right side */}
+            </div>
+          </div>
+          <div className="px-[24px] mt-[28px] grid justify-center items-center pb-[36px] md:flex md:flex-row md:gap-[11px] xl:mt-[59px] xl:gap-[30px]">
             {/* first div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
-              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto] ">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center xl:w-[255px] xl:h-[128px]">
+              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto] xl:text-[15px]">
                 ROTATION TIME
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto] xl:text-[40px]">
                 {currentPlanet.rotation}
               </h4>
             </div>
             {/* second div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
-              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto]">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center xl:w-[255px] xl:h-[128px]">
+              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto] xl:text-[15px]">
                 REVOLUTION TIME
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto] xl:text-[40px]">
                 {currentPlanet.revolution}
               </h4>
             </div>
             {/* third div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
-              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto]">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center xl:w-[255px] xl:h-[128px]">
+              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto] xl:text-[15px]">
                 RADIUS
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto] xl:text-[40px]">
                 {currentPlanet.radius}
               </h4>
             </div>
             {/* fourth div */}
-            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center">
-              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto]">
+            <div className="w-[327px] h-[48px] border border-solid border-white border-opacity-20 mt-[8px] flex items-center px-[24px] md:h-[88px] md:flex-col justify-center xl:w-[255px] xl:h-[128px]">
+              <p className="text-[#FFFFFF] font-bold text-[10px] opacity-[0.5] font-sparten mr-[auto] xl:text-[15px]">
                 AVERAGE TEMP.
               </p>
-              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto]">
+              <h4 className="text-[#FFFFFF] text-[20px] font-normal font-antonio ml-[auto] md:ml-[0] md:mr-[auto] xl:text-[40px]">
                 {currentPlanet.temperature}
               </h4>
             </div>
