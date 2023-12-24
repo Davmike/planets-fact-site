@@ -21,7 +21,7 @@ export default function TabletHeader() {
                 <div key={index}>
                   <div
                     key={index}
-                    className="flex justify-center items-center mt-[20px]"
+                    className="flex justify-center items-center mt-[20px] cursor-pointer"
                     onClick={() => {
                       navigate(`/${planet.name}`);
                     }}

@@ -19,7 +19,7 @@ export default function Planet({ hidden }) {
       {!hidden && (
         <div>
           {/* here i write a overviev, structure and surface */}
-          <div className="flex items-center justify-center gap-[57px] mt-[20px] px-[24px] md:hidden">
+          <div className="flex items-center justify-center gap-[57px] mt-[20px] px-[24px] cursor-pointer md:hidden">
             {/* overview */}
             <div>
               <p
@@ -75,6 +75,7 @@ export default function Planet({ hidden }) {
               </p>
             </div>
           </div>
+
           {/* hr line */}
           <hr className="px-[0] h-[1px] bg-[#FFF] opacity-[0.2] mt-[20px]" />
           <div className="xl:flex xl:gap-[193px] xl:justify-center">

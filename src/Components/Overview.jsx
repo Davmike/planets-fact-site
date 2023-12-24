@@ -7,11 +7,11 @@ export default function Overview({ change, setChange }) {
   const currentPlanet = data.find((item) => item.name === planet);
 
   return (
-    <div className="hidden md:flex flex-col gap-[16px] mt-[140px] xl:mt-[40px]">
+    <div className="hidden md:flex flex-col gap-[16px] mt-[140px] xl:mt-[40px] cursor-pointer">
       {/* Overview section*/}
       <div
         onClick={() => setChange("overview")}
-        className={`md:w-[281px] md:h-[40px] md:border md:border-solid md:border-white md:border-opacity-20 ${
+        className={`hover:bg-[#878787] md:w-[281px] md:h-[40px] md:border md:border-solid md:border-white md:border-opacity-20 ${
           change === "overview" ? "opacity-100" : "opacity-50"
         }`}
         style={
@@ -27,7 +27,7 @@ export default function Overview({ change, setChange }) {
       {/* Structure section */}
       <div
         onClick={() => setChange("structure")}
-        className={`md:w-[281px] md:h-[40px] md:border md:border-solid md:border-white md:border-opacity-20 
+        className={`hover:bg-[#878787] md:w-[281px] md:h-[40px] md:border md:border-solid md:border-white md:border-opacity-20 
         ${change === "structure" ? "opacity-100" : "opacity-50"}`}
         style={
           change === "structure"
@@ -42,7 +42,7 @@ export default function Overview({ change, setChange }) {
       {/* Sruface section */}
       <div
         onClick={() => setChange("geology")}
-        className={`md:w-[281px] md:h-[40px] md:border md:border-solid md:border-white md:border-opacity-20 ${
+        className={`hover:bg-[#878787] md:w-[281px] md:h-[40px] md:border md:border-solid md:border-white md:border-opacity-20 ${
           change === "geology" ? "opacity-100" : "opacity-50"
         }`}
         style={
