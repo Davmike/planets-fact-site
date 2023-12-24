@@ -9,8 +9,10 @@ export default function Planet({ hidden }) {
   const { planet } = useParams();
 
   const [change, setChange] = useState("overview");
+  // const [showSecondImage, setShowSecondImage] = useState(true);
 
   const currentPlanet = data.find((item) => item.name === planet);
+  // const InsidePlanetImage = currentPlanet?.images?.planet?.geology;
 
   return (
     <>
@@ -21,7 +23,9 @@ export default function Planet({ hidden }) {
             {/* overview */}
             <div>
               <p
-                onClick={() => setChange("overview")}
+                onClick={() => {
+                  setChange("overview");
+                }}
                 className={`text-white text-[11px] font-bold tracking-widest ${
                   change === "overview" ? "opacity-100" : "opacity-50"
                 }`}
@@ -37,7 +41,9 @@ export default function Planet({ hidden }) {
             {/* strucutre */}
             <div>
               <p
-                onClick={() => setChange("structure")}
+                onClick={() => {
+                  setChange("structure");
+                }}
                 className={`text-white text-[11px] font-bold tracking-widest  ${
                   change === "structure" ? "opacity-100" : "opacity-50"
                 }`}
@@ -53,7 +59,9 @@ export default function Planet({ hidden }) {
             {/* surface */}
             <div>
               <p
-                onClick={() => setChange("geology")}
+                onClick={() => {
+                  setChange("geology");
+                }}
                 className={`text-white text-[11px] font-bold tracking-widest ${
                   change === "geology" ? "opacity-100" : "opacity-50"
                 }`}
@@ -70,12 +78,29 @@ export default function Planet({ hidden }) {
           {/* hr line */}
           <hr className="px-[0] h-[1px] bg-[#FFF] opacity-[0.2] mt-[20px]" />
           <div className="xl:flex xl:gap-[193px] xl:justify-center">
-            <div className=" flex justify-center items-center xl:justify-start">
+            <div className=" flex justify-center items-center xl:justify-start relative">
               <img
                 className="px-[24px] w-[220px] mt-[75px] md:w-[285px] xl:w-[450px]"
-                src={currentPlanet.images.planet}
+                src={
+                  change === "structure"
+                    ? currentPlanet?.images?.internal
+                    : currentPlanet?.images?.planet
+                }
                 alt="all planet image"
               />
+              <div
+                className={`${
+                  change !== "geology" ? "flex" : ""
+                } w-[133px] absolute top-1/2`}
+              >
+                {change === "geology" && (
+                  <img
+                    className="absolute w-[75px] top-[65px] left-[31px] md:w-[95px] md:top-[90px] md:left-[21px] xl:w-[133px] xl:top-[117px] xl:left-[157px]"
+                    src={currentPlanet?.images?.geology}
+                    alt="geology image"
+                  />
+                )}
+              </div>
             </div>
 
             {/* text sectiction */}

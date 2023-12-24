@@ -10,13 +10,24 @@
   box-sizing: border-box;
 }
 
+@keyframes moveStars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
 body {
   background: #070724;
   font-family: "Antonio", sans-serif;
   font-family: "League Spartan", sans-serif;
   background-image: url(.././public/assets/background-stars.svg);
   background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
+  animation: moveStars 20s linear infinite;
 }
 
 .font-antonio {
