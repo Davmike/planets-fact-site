@@ -119,7 +119,22 @@ export default function Planet({ hidden }) {
                     <span className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-normal">
                       Source :
                     </span>
-                    Wikipedia
+                    <a
+                      href={
+                        change === "overview"
+                          ? currentPlanet?.overview?.source
+                          : change === "structure"
+                          ? currentPlanet?.structure?.source
+                          : change === "geology"
+                          ? currentPlanet?.geology?.source
+                          : "#"
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#FFF] opacity-[0.5] text-[12px] font-sparten font-bold hover:opacity-100"
+                    >
+                      Wikipedia
+                    </a>
                   </p>
                   <img
                     className="ml-[4px]"
