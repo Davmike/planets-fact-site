@@ -9,10 +9,8 @@ export default function Planet({ hidden }) {
   const { planet } = useParams();
 
   const [change, setChange] = useState("overview");
-  // const [showSecondImage, setShowSecondImage] = useState(true);
 
   const currentPlanet = data.find((item) => item.name === planet);
-  // const InsidePlanetImage = currentPlanet?.images?.planet?.geology;
 
   return (
     <>
