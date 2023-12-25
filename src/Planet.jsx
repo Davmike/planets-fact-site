@@ -109,7 +109,7 @@ export default function Planet({ hidden }) {
                 <h1 className="text-[#FFFFFF] text-[40px] font-normal font-antonio mt-[98px] xl:text-[80px]">
                   {currentPlanet.name.toLocaleUpperCase()}
                 </h1>
-                <p className="text-[#FFFFFF] text-[11px] font-normal w-[39ch] font-sparten mt-[16px] leading-5 opacity-70 md:text-[15px]">
+                <p className="text-[#FFFFFF] text-[11px] font-normal w-[39ch] h-[132px] font-sparten mt-[16px] leading-5 opacity-70 md:text-[15px]">
                   {currentPlanet[change]?.content}
                 </p>
                 <div className="flex items-center justify-center mt-[32px] md:justify-start">
